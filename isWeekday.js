@@ -1,3 +1,3 @@
-module.exports = function isWeekday(weekDay) {
-    return weekDay.startsWith('M');
-  }
+module.exports=function isWeekday(week){
+  return week.startsWith('Mon') 
+ }

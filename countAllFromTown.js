@@ -1,16 +1,16 @@
-module.exports = function countAllFromTown(itemName) {
+module.exports = function countAllFromTown(regNum,town){
+  var list = regNum.split(',');
   
-    let counter = 0;
-    const item = itemName.split (',');
-   
-    for (var i=0;i<item.length;i++) {
-      let fromTown = item[i];
-      if(fromTown.startsWith('CL')) {
-        counter ++;
-      }
-     else if(fromTown.startsWith('CF')) {
-      counter++;
-     }
-    }
-    return counter;
-  }
+  var counter = 0;
+  var fromTown = []
+  for (var i=0 ; i<list.length; i++){
+    var newList = list[i].trim();
+    
+    if(newList.includes(town)== true){
+    counter++;
+      
+   } 
+}
+  console.log(newList);
+return counter;
+ }    

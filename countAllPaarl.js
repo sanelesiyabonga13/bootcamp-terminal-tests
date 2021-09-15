@@ -1,15 +1,14 @@
-module.exports = function countAllPaarl(regNo) {
-  
-    var number = regNo.split(',');
-    let count = 0;
-    var regNo = []; 
-    for (var i=0;i<number.length;i++){
-      if (number[i].includes('CJ') === true){
-        count++;
-        regNo.push(number[i].trim());
-     
-      }
-    }
-  
-   return count;
+module.exports=function countAllPaarl(string){
+  var lst = string.split(',');
+   var regNumbersForPaarl = [];
+   var count = 0;
+  for (var i=0; i<lst.length; i++){
+    
+    if (lst[i].includes('CJ') == true){
+      count++;
+    regNumbersForPaarl.push(lst[i].trim());
+      
+  }
+ }
+ return count;
 }
